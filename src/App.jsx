@@ -1,28 +1,19 @@
-import { useState } from 'react'
+import BrandHero from './components/BrandHero';
+import CollectionGallery from './components/CollectionGallery';
+import DevotionalDetails from './components/DevotionalDetails';
+import InvitationSignup from './components/InvitationSignup';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-neutral-950 text-neutral-100 selection:bg-amber-300/30 selection:text-amber-100">
+      <BrandHero />
+      <CollectionGallery />
+      <DevotionalDetails />
+      <InvitationSignup />
+      <footer className="border-t border-neutral-800 py-10 text-center text-sm text-neutral-400">
+        <p>© {new Date().getFullYear()} FOTTOKOGAE — Fruit of the Tree of Knowledge of Good and Evil</p>
+        <p className="mt-1">An homage to scripture; shaped for the present age.</p>
+      </footer>
     </div>
-  )
+  );
 }
-
-export default App
